@@ -2,10 +2,10 @@
 FROM openjdk:17
 
 # Set the working directory
-WORKDIR ./app
+WORKDIR app
 
 # Copy the packaged Spring Boot JAR file into the container
-COPY ./target/the-pink-project.jar ./app/app.jar
+COPY target/the-pink-project.jar app.jar
 
 # Expose the port that your Spring Boot application uses
 EXPOSE 8080
@@ -19,4 +19,4 @@ EXPOSE 8080
 #ENTRYPOINT ["java", "-jar", "/app.jar"]
 
 # Command to run the Spring Boot application
-CMD ["java", "-jar", "./app/app.jar"]
+CMD ["java", "-jar", "app.jar"]
