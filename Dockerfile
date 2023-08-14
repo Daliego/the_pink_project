@@ -5,7 +5,7 @@ FROM openjdk:17
 WORKDIR /app
 
 # Copy the packaged Spring Boot JAR file into the container
-COPY target/the-pink-project.jar app.jar
+COPY target/the-pink-project.jar ./app.jar
 
 # Expose the port that your Spring Boot application uses
 EXPOSE 8080
