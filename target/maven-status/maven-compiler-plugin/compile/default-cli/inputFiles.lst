@@ -1,2 +1,11 @@
-C:\Users\diego\Programacao\ADS_2023.2\programacao_para_internet_II\the_pink_project\src\main\java\com\thepinkproject\the_pink_project\cotroller\HelloController.java
+C:\Users\diego\Programacao\ADS_2023.2\programacao_para_internet_II\the_pink_project\src\main\java\com\thepinkproject\the_pink_project\domain\usecases\UpdateProductStatusUsecase.java
+C:\Users\diego\Programacao\ADS_2023.2\programacao_para_internet_II\the_pink_project\src\main\java\com\thepinkproject\the_pink_project\domain\usecases\DeleteProductUsecase.java
+C:\Users\diego\Programacao\ADS_2023.2\programacao_para_internet_II\the_pink_project\src\main\java\com\thepinkproject\the_pink_project\domain\usecases\FindAllProductsUsecase.java
+C:\Users\diego\Programacao\ADS_2023.2\programacao_para_internet_II\the_pink_project\src\main\java\com\thepinkproject\the_pink_project\domain\repository\jpaRepository\ProductRepository.java
+C:\Users\diego\Programacao\ADS_2023.2\programacao_para_internet_II\the_pink_project\src\main\java\com\thepinkproject\the_pink_project\domain\dtos\ProductDTO.java
+C:\Users\diego\Programacao\ADS_2023.2\programacao_para_internet_II\the_pink_project\src\main\java\com\thepinkproject\the_pink_project\domain\dtos\ChangeStatusDTO.java
+C:\Users\diego\Programacao\ADS_2023.2\programacao_para_internet_II\the_pink_project\src\main\java\com\thepinkproject\the_pink_project\presentation\cotroller\ProductController.java
+C:\Users\diego\Programacao\ADS_2023.2\programacao_para_internet_II\the_pink_project\src\main\java\com\thepinkproject\the_pink_project\domain\models\Product.java
+C:\Users\diego\Programacao\ADS_2023.2\programacao_para_internet_II\the_pink_project\src\main\java\com\thepinkproject\the_pink_project\helperClass\HelperClass.java
 C:\Users\diego\Programacao\ADS_2023.2\programacao_para_internet_II\the_pink_project\src\main\java\com\thepinkproject\the_pink_project\ThePinkProjectApplication.java
+C:\Users\diego\Programacao\ADS_2023.2\programacao_para_internet_II\the_pink_project\src\main\java\com\thepinkproject\the_pink_project\domain\usecases\SaveProductUsecase.java
