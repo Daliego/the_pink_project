@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update HTML page</title>
+</head>
+<body>
+<div class="center">
+  <div>
+    <h1>Update Status dos produtos</h1>
+    <form method="post" th:action="@{/updateProduct/__${Id}__}" th:object="${changeStatusDto}" style="padding: 7px">
+      <div class="form-elements">
+        <div>
+          <label for="status-2"> Disponibilidade </label>
+          <input id="status-2" type="checkbox" checked th:field="*{status}" class="form-group-input" />
+        </div>
+        <button type="submit" onclick="return confirm('sure?')">Update</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

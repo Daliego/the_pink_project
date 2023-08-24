@@ -1,0 +1,43 @@
+.center {
+    margin: auto;
+    width: 70%;
+    height: 100%;
+    border: 3px solid black;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+}
+
+.form-group-input {
+    margin: auto;
+    border: 3px solid green;
+    display: flex;
+    padding: 10px;
+    align-content: center;
+}
+
+form {
+    padding: 10px;
+}
+
+.form-elements {
+    padding-bottom: 20px;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+.form-group-input {
+    label {
+        font-size: large;
+    }
+}
+
+.create-user-button {
+    padding: 5px;
+    color: #031b33;
+    margin: auto;
+    border: 3px solid green;
+    display: flex;
+}

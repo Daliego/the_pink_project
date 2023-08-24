@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Spring Boot com Thymeleaf</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<h1 style="color: #e85454"> List of investments </span></h1>
+    <div class="center">
+        <table style="color: black">
+            <thead>
+                <tr>
+                    <th> Nome </th>
+                    <th> Disponibilidade </th>
+                    <th> Descrição </th>
+                    <th> Taxa de Rentabilidade </th>
+                    <th> Prazo </th>
+                    <th> Taxa de ADM </th>
+                    <th> Vencimento </th>
+                </tr>
+            </thead>
+            <tbody th:border="4" style="color: black">
+                <tr th:each="investment : ${investmentsArray}" style="padding: 10px">
+                    <td> <span th:text="${investment.getName()}">Title</span> </td>
+                    <td th:text="${investment.getAvailability()}"></td>
+                    <td th:text="${investment.getDestination()}"></td>
+                    <td th:text="${investment.getRentabilityTax()}"></td>
+                    <td th:text="${investment.getMinimumTime()}"></td>
+                    <td th:text="${investment.getAdministrationTax()}"></td>
+                    <td th:text="${investment.getVencimento()}"></td>
+<!--                    <td><button th:action="/updateProduct">edit</button></td>-->
+<!--                    <td></td>-->
+                    <td>
+                        <div class="form-elements-organization">
+                            <form method="get" th:action="@{/updateProduct/__${investment.getId()}__}" >
+                                <button type="submit">Editar</button>
+                            </form>
+                            <form method="post" th:action="@{/deleteProduct/__${investment.getId()}__}" th:object="${productDto}">
+    <!--                            <input type="hidden" th:field="*{getName()}">-->
+                                <button type="submit" onclick="return confirm('sure?')"> Deletar </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

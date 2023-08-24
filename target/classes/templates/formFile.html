@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Spring Boot com Thymeleaf</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function throwAler(message) {
+            alert(message);
+        }
+
+    </script>
+</head>
+    <body style="color: pink">
+        <h1 style="color: #e85454"> The pink bank </span></h1>
+        <div >
+            <h2 class="center"> Create new investiment </h2>
+<!--            <h3><span th:text="${text}" style="color: red"></span></h3>-->
+            <form method="post" action="/product" th:object="${productDTO}" class="center">
+                <div class="form-elements">
+                    <div class="form-group-input">
+                        <label for="name">Name: </label>
+                        <input id="name" placeholder="Name..." required type="text" th:field="*{name}" class="input"/>
+                    </div>
+                    <div class="form-group-input">
+                        <label for="availability">Disbonibilidade: </label>
+                        <input id="availability" placeholder="Disbonibilidade..." required type="checkbox" th:field="*{availability}" class="input"/>
+                    </div>
+                    <div class="form-group-input">
+                        <label for="destination">Destino: </label>
+                        <input id="destination" placeholder="Destino..." required type="text" th:field="*{destination}" class="input"/>
+                    </div>
+                    <div class="form-group-input">
+                        <label for="rentabilityTax">Taxa de rentabilidade: </label>
+                        <input id="rentabilityTax" required
+                               th:field="*{rentabilityTax}" th:max="20" th:min="1"
+                               th:type="number" class="input"/>
+                    </div>
+                    <div class="form-group-input">
+                        <label for="minimunTime">Prazo minímo: </label>
+                        <input id="minimunTime" required type="number"
+                               th:field="*{minimunTime}" th:max="48" th:min="0"class="input"/>
+                    </div>
+
+                    <div class="form-group-input">
+                        <label for="administrationTax">Taxa de administração: </label>
+                        <input id="administrationTax" required type="number"
+                               th:field="*{administrationTax}" class="input"/>
+                    </div>
+                    <button type="submit" class="create-user-button" value="Create User">Create Product</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
