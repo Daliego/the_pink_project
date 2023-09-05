@@ -1,5 +1,6 @@
 package com.thepinkproject.the_pink_project.domain.dtos;
 
+import com.thepinkproject.the_pink_project.domain.enums.Status;
 import lombok.*;
 
 import javax.ws.rs.DefaultValue;
@@ -12,5 +13,5 @@ import javax.ws.rs.DefaultValue;
 
 public class ChangeStatusDTO {
     public String id;
-    public Boolean status;
+    public Status status;
 }
