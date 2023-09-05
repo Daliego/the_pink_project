@@ -1,13 +1,16 @@
 package com.thepinkproject.the_pink_project.helperClass;
 
+import java.time.DateTimeException;
 import java.time.LocalDate;
 
 public class HelperClass {
-   public boolean isGonnaPassDayPay(LocalDate maximunDate, Integer mounths) {
-        LocalDate futureDate = LocalDate.now().plusMonths(mounths);
+    public static boolean isGonnaPassDayPay(LocalDate expirationDate, Integer numberOfMonths) {
+        LocalDate maximunDate = LocalDate.now().plusMonths(numberOfMonths);
 
-       boolean result;
-       result = futureDate.compareTo(maximunDate) < 0;
-       return result;
+        if (!expirationDate.isBefore(maximunDate)) {
+            return false;
+        }
+
+        return true;
    }
 }
