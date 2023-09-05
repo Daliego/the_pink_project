@@ -18,7 +18,7 @@
         <div >
             <h2 class="center"> Create new investiment </h2>
 <!--            <h3><span th:text="${text}" style="color: red"></span></h3>-->
-            <form method="post" action="/product" th:object="${productDTO}" class="center">
+            <form method="post" action="/productDto" th:object="${productDTO}" class="center">
                 <div class="form-elements">
                     <div class="form-group-input">
                         <label for="name">Name: </label>
@@ -41,7 +41,7 @@
                     <div class="form-group-input">
                         <label for="minimunTime">Prazo minímo: </label>
                         <input id="minimunTime" required type="number"
-                               th:field="*{minimunTime}" th:max="48" th:min="0"class="input"/>
+                               th:field="*{getMinPeriod}" th:max="48" th:min="0" class="input"/>
                     </div>
 
                     <div class="form-group-input">
