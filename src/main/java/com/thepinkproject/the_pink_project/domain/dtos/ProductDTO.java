@@ -1,10 +1,9 @@
 package com.thepinkproject.the_pink_project.domain.dtos;
 
-import jakarta.persistence.Column;
+import com.thepinkproject.the_pink_project.domain.enums.Status;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -12,11 +11,13 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 public class ProductDTO {
-
+    private String id;
     private String name;
-    private Boolean availability;
+    private Status availability;
     private String destination;
     private Integer rentabilityTax;
-    private Integer minimunTime;
+    private Integer minPeriod;
     private Integer administrationTax;
+    private LocalDate expirationDate;
+    private Boolean dailyLiquidity;
 }
