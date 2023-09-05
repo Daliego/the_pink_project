@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 //import javax.persistance.*;
 
@@ -15,7 +14,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Entity
 @Table(name = "product", uniqueConstraints = { @UniqueConstraint(columnNames = {"name"}) })
-public class Product {
+public class ProductDto {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
@@ -40,4 +39,11 @@ public class Product {
 
     @Column(name = "vencimento")
     private LocalDate vencimento;
+
+    @Column(name = "dailyLiquidity")
+    private Boolean dailyLiquidity;
+
+    Boolean isDailyLiquidity() {
+        return this.getDailyLiquidity();
+    }
 }
